@@ -131,12 +131,22 @@ console.log(invertiStringa("Ciao"));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+function inizialiMaiuscole(frase) {
+
+}
+
 /* ESERCIZIO 9 — togliPrimoEUltimo
    Funzione togliPrimoEUltimo(testo): rimuovi primo e ultimo carattere.
    Usa slice. Prova con "EPICODE".
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+function togliPrimoEUltimo(testo) {
+   return testo.slice(1, -1);
+}
+
+console.log(togliPrimoEUltimo("EPICODE"));
 
 /* ESERCIZIO 10 — dammiCasuali
    Funzione dammiCasuali(n): ritorna un array di n numeri interi casuali tra 0 e 10 (inclusi).
