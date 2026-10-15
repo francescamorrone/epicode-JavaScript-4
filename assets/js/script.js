@@ -132,8 +132,19 @@ console.log(invertiStringa("Ciao"));
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 function inizialiMaiuscole(frase) {
+   const maiuscole = frase.split(" ");
+   const word = [];
 
+   for(let i = 0; i <maiuscole.length; i++) {
+      const firstLetter = maiuscole[i].slice(0,1).toUpperCase();
+      const letters = maiuscole[i].slice(1);
+      const unione = firstLetter + letters;
+      word.push(unione);
+   }
+   return word.join(" ");
 }
+
+console.log(inizialiMaiuscole("ciao mondo"));
 
 /* ESERCIZIO 9 — togliPrimoEUltimo
    Funzione togliPrimoEUltimo(testo): rimuovi primo e ultimo carattere.
@@ -155,6 +166,17 @@ console.log(togliPrimoEUltimo("EPICODE"));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+function dammiCasuali(n) {
+   const nRandom = [];
+
+   for(let i = 0; i < n; i++) {
+      nRandom.push(Math.floor(Math.random() * 11));
+   }
+   return nRandom;
+}
+
+console.log(dammiCasuali(10));
+
 /* --EXTRA-- ESERCIZIO 11 — etaInGiorni
    Funzione etaInGiorni(annoNascita, meseNascita, giornoNascita).
    Ritorna l'età in giorni rispetto a oggi.
@@ -166,3 +188,15 @@ console.log(togliPrimoEUltimo("EPICODE"));
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+function etaInGiorni(annoNascita, meseNascita, giornoNascita) {
+   const oggi = new Date();
+   const nascita = new Date(annoNascita, meseNascita - 1, giornoNascita);
+   const millisecondi = oggi - nascita;
+   const giorniInteri = millisecondi/(1000 * 60 * 60 * 24);
+   return Math.floor(giorniInteri);
+}
+
+const giorni = etaInGiorni(1999, 6, 27);
+console.log(`Hai ${giorni} giorni!`);
+
