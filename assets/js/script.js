@@ -26,6 +26,15 @@ console.log(area(3, 4));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+function sommaPazza(a, b) {
+   if(a === b) {
+      return (a + b) *3;
+   }
+   return a + b;
+}
+console.log(sommaPazza(2,3));
+console.log(sommaPazza(4,4));
+
 /* ESERCIZIO 3 — distanzaDa19
    Funzione distanzaDa19(n): ritorna Math.abs(n - 19).
    Se n > 19: ritorna distanza * 3.
@@ -34,12 +43,32 @@ console.log(area(3, 4));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+function distanzaDa19(n) {
+   if(n > 19) {
+      return (n - 19) * 3;
+   }
+   return Math.abs(n - 19)
+};
+
+console.log(distanzaDa19(5));
+console.log(distanzaDa19(25));
+
 /* ESERCIZIO 4 — dentroIntervallo
    Funzione dentroIntervallo(n):
    true se n è tra 20 e 100 (compresi) oppure è esattamente 400.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+function dentroIntervallo(n) {
+   if(n >= 20 && n <= 100 || n === 400 ) {
+      return true;
+   }
+}
+
+console.log(dentroIntervallo(101));
+console.log(dentroIntervallo(400));
+console.log(dentroIntervallo(23));
 
 /* ESERCIZIO 5 — epify
    Funzione epify(testo): aggiunge "EPICODE " davanti.
