@@ -10,7 +10,13 @@ REGOLE
    Stampa area(3, 4).
 */
 
+
 /* SCRIVI QUI LA TUA RISPOSTA */
+function  area( l1, l2 ) {
+   return l1 * l2;
+}
+
+console.log(area(3, 4));
 
 /* ESERCIZIO 2 — sommaPazza
    Funzione sommaPazza(a, b): ritorna a + b.
