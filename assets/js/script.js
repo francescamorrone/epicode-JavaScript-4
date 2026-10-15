@@ -193,8 +193,8 @@ function etaInGiorni(annoNascita, meseNascita, giornoNascita) {
    const oggi = new Date();
    const nascita = new Date(annoNascita, meseNascita - 1, giornoNascita);
    const millisecondi = oggi - nascita;
-   const giorniInteri = millisecondi/(1000 * 60 * 60 * 24);
-   return Math.floor(giorniInteri);
+   const giorniInMillisecondi = millisecondi/(1000 * 60 * 60 * 24);
+   return Math.floor(giorniInMillisecondi);
 }
 
 const giorni = etaInGiorni(1999, 6, 27);
